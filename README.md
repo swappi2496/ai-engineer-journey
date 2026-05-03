@@ -5,7 +5,7 @@
 ## Progress Tracker
 
 - [x] Week 1 — Python Fundamentals
-- [ ] Week 2 — Data Structures & Algorithms
+- [x] Week 2 — Data Structures & Algorithms
 - [ ] Week 3 — NumPy & Pandas
 - [ ] Week 4 — Data Visualisation
 - [ ] Week 5 — Machine Learning Basics
