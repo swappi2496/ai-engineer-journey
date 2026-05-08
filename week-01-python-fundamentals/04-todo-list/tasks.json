@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "text": "buy groceries",
+    "done": true
+  },
+  {
+    "id": 2,
+    "text": "go to gym",
+    "done": true
+  },
+  {
+    "id": 3,
+    "text": "commit 8th may code",
+    "done": true
+  }
+]
