@@ -5,19 +5,31 @@ tasks_file = "tasks.json"
 
 def load_tasks():
     #if tasks_file doesn't exist, return an empty list
-
+    if not os.path.exists(tasks_file):
+        return []
     #otherwise, open it and return json.load(f)
-    pass
+    with open(tasks_file, 'r') as f:
+        return json.load(f)
 
-def save_tasks():
+def save_tasks(tasks):
     # open tasks_file for writing, json.dump(tasks, f, indent = 2)
-    pass
+    with open(tasks_file, 'w') as f:
+        json.dump(tasks, f, indent = 2)
 
 def add_task(tasks):
     text = input("Task description: ").strip()
+    if not text:
+        print("Empty task - not added.")
+        return
     # calculate next id (max existing id +1, or 1 if empty)
+    if tasks:
+        next_id = max(tasks["id"] for task in tasks) +1
+    else:
+        next_id = 1
     # Append a new task dict {"id": ..., "text": ..., "done": false}
-    pass
+    new_task = {"id": next_id, "text": text, "done": False}
+    tasks.append(new_task)
+    print(f"Added : [{next_id}] {text}")
 
 def list_tasks(tasks):
     if not tasks:
